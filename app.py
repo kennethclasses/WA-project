@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 import plotly.graph_objects as go
 
-car_data = pd.read_csv('/users/amkalmah/project/WA-project/vehicles_us.csv') 
+car_data = pd.read_csv('vehicles_us.csv') 
 car_data["is_4wd"] = car_data["is_4wd"].fillna(0).astype(bool)
 st.header("Visualizacion de Datos de Vehículos en USA")
 
