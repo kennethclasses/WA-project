@@ -67,19 +67,3 @@ if disp_button:
     st.write("Gráfico de Dispersión: Condicion vs Precio")
     fig = px.scatter(car_data, x="condition", y="price")
     st.plotly_chart(fig)
-
-
-table_button = st.checkbox('Mostrar tabla de datos')
-if table_button:
-    st.write("Tabla de Datos de Vehículos")
-    fig = go.Figure(data=[go.Table(
-        header=dict(values=list(car_data.columns),
-                line_color='darkslategray',
-                fill_color='lightskyblue',
-                align='left'),
-        cells=dict(values=list(car_data.transpose().values),
-                line_color='darkslategray',
-                fill_color='lightcyan',
-                align='left'))
-    ])
-    st.plotly_chart(fig)
